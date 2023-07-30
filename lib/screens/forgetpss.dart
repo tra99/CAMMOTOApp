@@ -1,17 +1,16 @@
 import 'package:cammoto_project/reusable/textfield.dart';
-import 'package:cammoto_project/screens/forgetpss.dart';
-import 'package:cammoto_project/screens/signup.dart';
+import 'package:cammoto_project/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class ForgetPassword extends StatefulWidget {
+  const ForgetPassword({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<ForgetPassword> createState() => _ForgetPasswordState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
         body: Stack(
           children: [
             Image.asset(
-              'assets/cover1.png',
+              'assets/cover3.png',
               height: 230,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -28,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
               reverse: true,
               child: Column(
                 children: [
-                  SizedBox(height: 230),
+                  const SizedBox(height: 230),
                   Container(
                     height: 480,
                     width: double.infinity,
@@ -43,9 +42,9 @@ class _LoginPageState extends State<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(top: 20),
+                            padding: EdgeInsets.only(top: 6),
                             child: Text(
-                              'Welcome to CAMMOTO!',
+                              'Forget password !',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -54,49 +53,44 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           const SizedBox(
-                            height: 30,
+                            height: 10,
                           ),
                           const Text(
                             'Email',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w400,
-                                fontSize: 20),
+                                fontSize: 16),
                           ),
                           const SizedBox(
-                            height: 6,
+                            height: 2,
                           ),
-                          reusableTextField('Enter email', Icons.email_outlined, false),
+                          reusableTextField('Enter email', Icons.email, false),
                           const SizedBox(
-                            height: 14,
+                            height: 8,
                           ),
                           const Text(
                             'Password',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w400,
-                                fontSize: 20),
+                                fontSize: 16),
                           ),
                           const SizedBox(
-                            height: 6,
+                            height: 2,
                           ),
                           reusableTextField1(
                               'Enter password', Icons.enhanced_encryption_rounded, true),
-                          GestureDetector(
-                            onTap: () {
-                              Get.to(const ForgetPassword());
-                            },
-                            child: const Padding(
-                              padding: EdgeInsets.only(top: 10, left: 178),
-                              child: Text(
-                                "Forget your password ?",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 16),
-                              ),
-                            ),
+                          const SizedBox(height: 8,),
+                          const Text(
+                            'Confirm Password',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16),
                           ),
+                          const SizedBox(height: 2,),
+                          reusableTextField1('Repeated Password', Icons.enhanced_encryption_rounded, true),
                           const SizedBox(
                             height: 10,
                           ),
@@ -129,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
-                                "Don't have an account?",
+                                "Already have an account?",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 16),
                               ),
@@ -137,10 +131,10 @@ class _LoginPageState extends State<LoginPage> {
                                 padding: const EdgeInsets.only(left: 6),
                                 child: GestureDetector(
                                   onTap: () {
-                                    Get.to(const SignUpPage());
+                                    Get.to(const LoginPage());
                                   },
                                   child: const Text(
-                                    'Sign up',
+                                    'Sign in',
                                     style: TextStyle(
                                         color: Color.fromARGB(255, 245, 160, 31),
                                         fontSize: 24),
