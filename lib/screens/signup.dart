@@ -29,7 +29,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 children: [
                   const SizedBox(height: 230),
                   Container(
-                    height: 480,
+                    height: MediaQuery.of(context).size.height * 0.7,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                         color: Color.fromARGB(255, 35, 31, 32),

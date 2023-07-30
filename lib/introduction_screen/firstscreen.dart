@@ -1,6 +1,4 @@
-import 'package:cammoto_project/introduction_screen/secondscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class IntroductionPage1 extends StatefulWidget {
   const IntroductionPage1({Key? key}) : super(key: key);
@@ -16,11 +14,14 @@ class _IntroductionPage1State extends State<IntroductionPage1> {
       body: SafeArea(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(left: 30, top: 30),
-              child: Text(
-                'Repair',
-                style: TextStyle(fontSize: 42, fontWeight: FontWeight.w400),
+            Container(
+              margin: const EdgeInsets.only(left: 20,top: 20),
+              child: const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Repair',
+                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.w400),
+                ),
               ),
             ),
             const SizedBox(height: 50),
@@ -30,31 +31,31 @@ class _IntroductionPage1State extends State<IntroductionPage1> {
               child: Stack(
                 children: [
                   Positioned.fill(child: stackBox()),
-                  Align(
+                  const Align(
                     alignment: Alignment.center,
                     child: SingleChildScrollView( // Wrap with SingleChildScrollView
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      padding: EdgeInsets.symmetric(horizontal: 50),
                       child: Column(
                         children: [
-                          const Center(
+                          Center(
                             child: Text(
                               'As an introduction to a multi-part series on How To Service your own Motorcycle',
                               style: TextStyle(color: Colors.white, fontSize: 20),
                               textAlign: TextAlign.center,
                             ),
                           ),
-                          const SizedBox(height: 60,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextButton(onPressed: (){Get.to(const IntroScreen2());}, child: const Text('SKIP',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
-                              TextButton(onPressed: (){Get.to(const IntroScreen2());}, child: const Text('NEXT',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white)))
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          loading()
+                          SizedBox(height: 60,),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     TextButton(onPressed: (){Get.to(const IntroScreen2());}, child: const Text('SKIP',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
+                          //     TextButton(onPressed: (){Get.to(const IntroScreen2());}, child: const Text('NEXT',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white)))
+                          //   ],
+                          // ),
+                          // const SizedBox(
+                          //   height: 20,
+                          // ),
+                          // loading()
                         ],
                       ),
                     ),
@@ -69,7 +70,7 @@ class _IntroductionPage1State extends State<IntroductionPage1> {
   }
 
   Center imageCenter() {
-    return Center(child: Image.asset('assets/motor1.png'));
+    return Center(child: Image.asset('assets/motor1.png',width: 230,));
   }
 
   Container stackBox() {

@@ -28,9 +28,9 @@ class _LoginPageState extends State<LoginPage> {
               reverse: true,
               child: Column(
                 children: [
-                  SizedBox(height: 230),
+                  const SizedBox(height: 230),
                   Container(
-                    height: 480,
+                    height: MediaQuery.of(context).size.height * 0.7,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                         color: Color.fromARGB(255, 35, 31, 32),
@@ -87,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                               Get.to(const ForgetPassword());
                             },
                             child: const Padding(
-                              padding: EdgeInsets.only(top: 10, left: 178),
+                              padding: EdgeInsets.only(top: 10, left: 150),
                               child: Text(
                                 "Forget your password ?",
                                 style: TextStyle(

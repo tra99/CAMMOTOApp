@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../screens/login.dart';
 
 class IntroScreen4 extends StatefulWidget {
   const IntroScreen4({Key? key}) : super(key: key);
@@ -17,11 +14,14 @@ class _IntroScreen4State extends State<IntroScreen4> {
       body: SafeArea(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(left: 30, top: 30),
-              child: Text(
-                'Sell Product',
-                style: TextStyle(fontSize: 42, fontWeight: FontWeight.w400),
+            Container(
+              margin: const EdgeInsets.only(left: 20,top: 20),
+              child: const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Sell Product',
+                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.w400),
+                ),
               ),
             ),
             const SizedBox(height: 50),
@@ -31,31 +31,31 @@ class _IntroScreen4State extends State<IntroScreen4> {
               child: Stack(
                 children: [
                   Positioned.fill(child: stackBox()),
-                  Align(
+                  const Align(
                     alignment: Alignment.center,
                     child: SingleChildScrollView( 
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      padding: EdgeInsets.symmetric(horizontal: 50),
                       child: Column(
                         children: [
-                          const Center(
+                          Center(
                             child: Text(
                               'As an introduction to a multi-part series on How To Service your own Motorcycle',
                               style: TextStyle(color: Colors.white, fontSize: 20),
                               textAlign: TextAlign.center,
                             ),
                           ),
-                          const SizedBox(height: 60,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextButton(onPressed: (){Get.to(const LoginPage());}, child: const Text('SKIP',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
-                              TextButton(onPressed: (){Get.to(const LoginPage());}, child: const Text('NEXT',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white)))
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          loading()
+                          SizedBox(height: 60,),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     TextButton(onPressed: (){Get.to(const LoginPage());}, child: const Text('SKIP',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
+                          //     TextButton(onPressed: (){Get.to(const LoginPage());}, child: const Text('NEXT',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white)))
+                          //   ],
+                          // ),
+                          // const SizedBox(
+                          //   height: 20,
+                          // ),
+                          
                         ],
                       ),
                     ),
@@ -70,7 +70,7 @@ class _IntroScreen4State extends State<IntroScreen4> {
   }
 
   Center imageCenter() {
-    return Center(child: Image.asset('assets/intro4.png',width: 160,));
+    return Center(child: Image.asset('assets/intro4.png',width: 150,));
   }
 
   Container stackBox() {

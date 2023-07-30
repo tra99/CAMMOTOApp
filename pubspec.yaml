@@ -38,6 +38,9 @@ dependencies:
   lottie: ^2.5.0
   flutter_spinkit: ^5.2.0
   get: ^4.6.5
+  intro_slider: ^4.2.0
+  introduction_screen: ^3.1.11
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:
