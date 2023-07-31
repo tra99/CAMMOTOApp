@@ -1,9 +1,10 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'dart:async';
-import 'package:cammoto_project/introduction_screen/firstscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+
+import '../introduction_screen/intro1.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Timer(
       const Duration(seconds: 3),(){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>const IntroductionPage1()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>const IntroPage()));
       }
       
     );

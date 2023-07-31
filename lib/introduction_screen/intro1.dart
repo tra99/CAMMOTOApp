@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class InroPage extends StatefulWidget {
-  const InroPage({super.key});
+class IntroPage extends StatefulWidget {
+  const IntroPage({super.key});
 
   @override
-  State<InroPage> createState() => _InroPageState();
+  State<IntroPage> createState() => _IntroPageState();
 }
 
-class _InroPageState extends State<InroPage> {
+class _IntroPageState extends State<IntroPage> {
   // controller move to next page
   PageController _controller = PageController();
 
@@ -31,11 +31,11 @@ class _InroPageState extends State<InroPage> {
               onLastPage=(index==3);
             });
           },
-          children: [
-            const IntroductionPage1(),
-            const IntroScreen2(),
-            const IntroScreen3(),
-            const IntroScreen4(),
+          children:const [
+            IntroductionPage1(),
+            IntroScreen2(),
+            IntroScreen3(),
+            IntroScreen4(),
           ],
         ),
         Container(

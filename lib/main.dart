@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'introduction_screen/intro1.dart';
+import 'splashPage/splashpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const InroPage(),
+      home:  const SplashPage(),
       debugShowCheckedModeBanner: false,
     );
   }
