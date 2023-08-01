@@ -10,10 +10,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List imageList = [
-    {"id": 1, "image_path": 'assets/slider1.png'},
-    {"id": 2, "image_path": 'assets/slider2.png'},
-    {"id": 3, "image_path": 'assets/slider3.png'},
-    {"id": 4, "image_path": 'assets/slider4.png'}
+    {"id": 1, "image_path": 'assets/slider1.jpg'},
+    {"id": 2, "image_path": 'assets/slider2.jpg'},
+    {"id": 3, "image_path": 'assets/slider3.jpg'},
+    {"id": 4, "image_path": 'assets/slider4.jpg'}
   ];
   final CarouselController carouselController = CarouselController();
   int currentIndex = 0;
