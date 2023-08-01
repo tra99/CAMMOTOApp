@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
   ];
   final CarouselController carouselController = CarouselController();
   int currentIndex = 0;
+  int _currentIndex = 0; // Added _currentIndex here
 
   @override
   Widget build(BuildContext context) {
@@ -125,6 +126,29 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.blueAccent,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _currentIndex,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home,size: 36,), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopify_rounded,size: 36), label: "Product"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person,size: 36), label: "Profile"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications,size: 36), label: "Messages"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.menu_outlined,size: 36), label: "Menu"),
+        ],
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
       ),
     );
   }
