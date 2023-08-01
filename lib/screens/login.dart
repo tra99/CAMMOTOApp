@@ -15,6 +15,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -31,13 +33,15 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   const SizedBox(height: 230),
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.7,
+                    height: MediaQuery.of(context).size.height * 0.8, // Adjust the height here
                     width: double.infinity,
                     decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 35, 31, 32),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(50),
-                            topRight: Radius.circular(50))),
+                      color: Color.fromARGB(255, 35, 31, 32),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50),
+                      ),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
                       child: Column(
@@ -48,10 +52,11 @@ class _LoginPageState extends State<LoginPage> {
                             child: Text(
                               'Welcome to CAMMOTO!',
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  fontStyle: FontStyle.italic),
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                fontStyle: FontStyle.italic,
+                              ),
                             ),
                           ),
                           const SizedBox(
@@ -60,9 +65,10 @@ class _LoginPageState extends State<LoginPage> {
                           const Text(
                             'Email',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 20),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20,
+                            ),
                           ),
                           const SizedBox(
                             height: 6,
@@ -74,15 +80,16 @@ class _LoginPageState extends State<LoginPage> {
                           const Text(
                             'Password',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 20),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20,
+                            ),
                           ),
                           const SizedBox(
                             height: 6,
                           ),
-                          reusableTextField1(
-                              'Enter password', Icons.enhanced_encryption_rounded, true),
+                          reusableTextField1('Enter password', Icons.enhanced_encryption_rounded, true),
+                          SizedBox(height: screenHeight * 0.06),
                           GestureDetector(
                             onTap: () {
                               Get.to(const ForgetPassword());
@@ -91,14 +98,15 @@ class _LoginPageState extends State<LoginPage> {
                               child: Text(
                                 "Forget your password ?",
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 16),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 16,
+                                ),
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight * 0.03,
                           ),
                           Center(
                             child: TextButton(
@@ -108,30 +116,29 @@ class _LoginPageState extends State<LoginPage> {
                               child: const Text(
                                 'Login',
                                 style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               style: TextButton.styleFrom(
-                                  foregroundColor:
-                                      const Color.fromARGB(255, 35, 31, 32),
-                                  backgroundColor:
-                                      const Color.fromARGB(255, 217, 217, 217),
-                                  padding: const EdgeInsets.only(
-                                      left: 40, right: 40, top: 8, bottom: 8),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10))),
+                                foregroundColor: const Color.fromARGB(255, 35, 31, 32),
+                                backgroundColor: const Color.fromARGB(255, 217, 217, 217),
+                                padding: const EdgeInsets.only(left: 40, right: 40, top: 8, bottom: 8),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight * 0.04,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
                                 "Don't have an account?",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 16),
+                                style: TextStyle(color: Colors.white, fontSize: 16),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 6),
@@ -142,11 +149,12 @@ class _LoginPageState extends State<LoginPage> {
                                   child: const Text(
                                     'Sign up',
                                     style: TextStyle(
-                                        color: Color.fromARGB(255, 245, 160, 31),
-                                        fontSize: 24),
+                                      color: Color.fromARGB(255, 245, 160, 31),
+                                      fontSize: 24,
+                                    ),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ],

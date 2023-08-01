@@ -13,6 +13,7 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -52,8 +53,8 @@ class _SignUpPageState extends State<SignUpPage> {
                                   fontStyle: FontStyle.italic),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight * 0.03,
                           ),
                           const Text(
                             'Username',
@@ -62,12 +63,12 @@ class _SignUpPageState extends State<SignUpPage> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16),
                           ),
-                          const SizedBox(
-                            height: 2,
+                          SizedBox(
+                            height: screenHeight * 0.01,
                           ),
                           reusableTextField('Username', Icons.person, false),
-                          const SizedBox(
-                            height: 8,
+                          SizedBox(
+                            height: screenHeight * 0.02,
                           ),
                           const Text(
                             'Email',
@@ -76,12 +77,14 @@ class _SignUpPageState extends State<SignUpPage> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16),
                           ),
-                          const SizedBox(
-                            height: 2,
+                          SizedBox(
+                            height: screenHeight * 0.01,
                           ),
                           reusableTextField(
                               'Enter email', Icons.email, false),
-                          const SizedBox(height: 8,),
+                          SizedBox(
+                            height: screenHeight * 0.02,
+                          ),
                           const Text(
                             'Password',
                             style: TextStyle(
@@ -89,10 +92,12 @@ class _SignUpPageState extends State<SignUpPage> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16),
                           ),
-                          const SizedBox(height: 2,),
+                          SizedBox(
+                            height: screenHeight * 0.01,
+                          ),
                           reusableTextField1('Enter Password', Icons.enhanced_encryption_rounded, true),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight * 0.032,
                           ),
                           Center(
                             child: TextButton(
@@ -116,8 +121,8 @@ class _SignUpPageState extends State<SignUpPage> {
                                       borderRadius: BorderRadius.circular(10))),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight * 0.03,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

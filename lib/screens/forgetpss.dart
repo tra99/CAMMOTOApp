@@ -13,6 +13,7 @@ class ForgetPassword extends StatefulWidget {
 class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -27,7 +28,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               reverse: true,
               child: Column(
                 children: [
-                  const SizedBox(height: 230),
+                  const SizedBox(height: 210),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.7,
                     width: double.infinity,
@@ -52,8 +53,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                   fontStyle: FontStyle.italic),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight*0.03,
                           ),
                           const Text(
                             'Email',
@@ -62,12 +63,12 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16),
                           ),
-                          const SizedBox(
-                            height: 2,
+                          SizedBox(
+                            height: screenHeight*0.01,
                           ),
                           reusableTextField('Enter email', Icons.email, false),
-                          const SizedBox(
-                            height: 8,
+                          SizedBox(
+                            height: screenHeight*0.02,
                           ),
                           const Text(
                             'Password',
@@ -76,12 +77,14 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16),
                           ),
-                          const SizedBox(
-                            height: 2,
+                          SizedBox(
+                            height: screenHeight*0.01,
                           ),
                           reusableTextField1(
                               'Enter password', Icons.enhanced_encryption_rounded, true),
-                          const SizedBox(height: 8,),
+                          SizedBox(
+                            height: screenHeight*0.02,
+                          ),
                           const Text(
                             'Confirm Password',
                             style: TextStyle(
@@ -89,10 +92,12 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16),
                           ),
-                          const SizedBox(height: 2,),
+                          SizedBox(
+                            height: screenHeight*0.01,
+                          ),
                           reusableTextField1('Repeated Password', Icons.enhanced_encryption_rounded, true),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight*0.03,
                           ),
                           Center(
                             child: TextButton(
@@ -116,8 +121,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                       borderRadius: BorderRadius.circular(10))),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: screenHeight*0.02,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

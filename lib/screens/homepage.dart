@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                       options: CarouselOptions(
                         scrollPhysics: const BouncingScrollPhysics(),
                         autoPlay: true,
-                        aspectRatio: 2.2,
+                        aspectRatio: 2.5,
                         viewportFraction: 1,
                         onPageChanged: (index, reason) {
                           setState(() {
