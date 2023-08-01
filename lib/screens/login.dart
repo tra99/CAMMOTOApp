@@ -1,5 +1,6 @@
 import 'package:cammoto_project/reusable/textfield.dart';
 import 'package:cammoto_project/screens/forgetpss.dart';
+import 'package:cammoto_project/screens/homepage.dart';
 import 'package:cammoto_project/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -86,8 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                             onTap: () {
                               Get.to(const ForgetPassword());
                             },
-                            child: const Padding(
-                              padding: EdgeInsets.only(top: 10, left: 150),
+                            child: Center(
                               child: Text(
                                 "Forget your password ?",
                                 style: TextStyle(
@@ -103,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                           Center(
                             child: TextButton(
                               onPressed: () {
-                                // code here
+                                Get.to(HomePage());
                               },
                               child: const Text(
                                 'Login',
