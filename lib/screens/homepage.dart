@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   ];
   final CarouselController carouselController = CarouselController();
   int currentIndex = 0;
-  int _currentIndex = 0; // Added _currentIndex here
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
