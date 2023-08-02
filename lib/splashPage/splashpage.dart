@@ -34,7 +34,7 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Image(image: AssetImage('assets/cam_motor_logo.png'), width: 200),
+            const Image(image: AssetImage('assets/logo01.png'), width: 300),
             GestureDetector(
               child: const Text.rich(
                 TextSpan(
